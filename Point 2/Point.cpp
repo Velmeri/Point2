@@ -22,6 +22,34 @@ Point::Point(int x, int y, int z) : Point(x, y)
 	this->z = z;
 }
 
+void Point::SetX(int x) {
+	this->x = x;
+}
+
+void Point::SetY(int y) {
+	this->y = y;
+}
+
+void Point::SetZ(int z) {
+	this->z = z;
+}
+
+int Point::GetX()
+{
+	return x;
+}
+
+int Point::GetY()
+{
+	return y;
+}
+
+int Point::GetZ()
+{
+	return z;
+}
+
+
 void Point::print()
 {
 	cout << "x = " << x << ", y = " << y << ", z = " << z;
