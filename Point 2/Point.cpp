@@ -54,3 +54,25 @@ void Point::print()
 {
 	cout << "x = " << x << ", y = " << y << ", z = " << z;
 }
+
+Point Point::operator+(const Point& obj)
+{
+	Point rez;
+
+	rez.x = x + obj.x;
+	rez.y = y + obj.y;
+	rez.z = z + obj.z;
+
+	return rez;
+}
+
+Point Point::operator-(const Point& obj)
+{
+	Point rez;
+
+	rez.x = x - obj.x;
+	rez.y = y - obj.y;
+	rez.z = z - obj.z;
+
+	return rez;
+}

@@ -4,10 +4,10 @@
 using namespace std;
 
 int main() {
-	Point A(1, 2, 3);
+	Point A(1, 2, 3), B(4, 5), C = A + B;
 
 	cout << endl << '\t';
-	A.print();
+	C.print();
 	cout << endl;
 
 	return 0;

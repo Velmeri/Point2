@@ -21,4 +21,8 @@ public:
 
 	//output
 	void print();
+
+	//operators
+	Point operator+ (const Point&);
+	Point operator- (const Point&);
 };
