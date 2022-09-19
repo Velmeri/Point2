@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 
 class Point
 {
@@ -21,4 +22,8 @@ public:
 
 	//output
 	void print();
+
+	//fstream
+	void Save(const char* path);
+	void Load(const char* path);
 };

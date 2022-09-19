@@ -54,3 +54,33 @@ void Point::print()
 {
 	cout << "x = " << x << ", y = " << y << ", z = " << z;
 }
+
+void Point::Save(const char* path)
+{
+	ofstream file;
+	file.open(path);
+	if (!file.is_open()) {
+		cout << "ERROR";
+	}
+	else {
+		file << (char)x << (char)y << (char)z;
+	}
+	file.close();
+}
+
+void Point::Load(const char* path)
+{
+	ifstream file;
+	file.open(path);
+	if (!file.is_open()) {
+		cout << "ERROR";
+	}
+	else {
+		char str[4] = { 0, 0, 0 };
+		file >> str;
+		x = str[0];
+		y = str[1];
+		z = str[2];
+	}
+	file.close();
+}
