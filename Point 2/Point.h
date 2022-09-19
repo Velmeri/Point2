@@ -22,3 +22,6 @@ public:
 	//output
 	void print();
 };
+
+Point operator+(Point & objL, Point& objR);
+Point operator-(Point& objL, Point& objR);

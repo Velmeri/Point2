@@ -54,3 +54,25 @@ void Point::print()
 {
 	cout << "x = " << x << ", y = " << y << ", z = " << z;
 }
+
+Point operator+(Point& objL, Point& objR)
+{
+	Point rez;
+
+	rez.SetX(objL.GetX() + objR.GetX());
+	rez.SetY(objL.GetY() + objR.GetY());
+	rez.SetZ(objL.GetZ() + objR.GetZ());
+
+	return rez;
+}
+
+Point operator-(Point& objL, Point& objR)
+{
+	Point rez;
+
+	rez.SetX(objL.GetX() - objR.GetX());
+	rez.SetY(objL.GetY() - objR.GetY());
+	rez.SetZ(objL.GetZ() - objR.GetZ());
+
+	return rez;
+}
